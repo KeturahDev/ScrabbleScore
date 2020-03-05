@@ -16,5 +16,15 @@ namespace ScrabbleScore.Tests
 
       Assert.AreEqual("a point accessed", status);
     }
+    [TestMethod]
+    public void GetPoint_LetterReturnsPoints_PointValue()
+    {
+      Letter newLetter = new Letter("q");
+      newLetter.setPoint();
+
+      int points = newLetter.Points;
+
+      Assert.AreEqual(10, points);
+    }
   }
 }

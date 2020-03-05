@@ -24,17 +24,9 @@ namespace ScrabbleScoreModels
         if (key.Contains(CurrentLetter))
         {
           Status = CurrentLetter +" point accessed";
+          // Points = key.Value;
         }
       }
-      // foreach (List<string> list in valueLists)
-      // {
-      //   if (list.Contains(CurrentLetter))
-      //   {
-      //     Status = CurrentLetter +" point accessed";
-      //     //Points = list.key
-      //   }
-
-      // }
     }
   }
 }
