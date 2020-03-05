@@ -9,14 +9,16 @@ namespace ScrabbleScoreModels
     // Dictionary<string, int> letterPointEvals = new Dictionary <string, int>() {{"A", 1}, {"E",1}, {""}}
     public string CurrentLetter {set;get;}
     public int Points {set;get;}
+    public string Status {set;get;}
     public Dictionary<int,List<string>> Options {get;}
     public Letter(string letter)
     {
       CurrentLetter = letter;
       Points = 0;
       Options = letterPointEvals;
+      Status = "not retreived";
     }
-    public void setPoint()
+    public void Access()
     {
       Dictionary<int,List<string>>.ValueCollection valueLists = Options.Values;
       Dictionary<int,List<string>>.KeyCollection keyColl = Options.Keys;
@@ -25,7 +27,7 @@ namespace ScrabbleScoreModels
       {
       if (list.Contains(CurrentLetter))
       {
-        Console.Write("yes");
+        // Status = "point accessed";
       }
 
       }
