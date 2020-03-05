@@ -22,7 +22,11 @@ This project is being created with the intention of practing object-in-object fu
 
 | Specification | Example Input | Example Output |
 | :------------- |:-------------| :-------------------|
-| letters return correct amount of points(regardless of caps) | "j" | *8 points*  |
+| letter confirms its accessed | "a" | *a from point1 list has been accessed*  |
+| letter confirms its accessed from given collects of lists | "j" | *a from point8 list has been accessed*  |
+| letters return correct amount of points | "j" | *8 points*  |
+| letters return correct amount of points(regardless of caps) | "J" | *8 points*  |
+| concatinated letters return both their points | "Jam" | *8 points, 1 points, 3 points*  |
 | letters in combination return a sum of their points| "Moo" | *5 points*  |
 | user inputs a word, application returns their score | user: "assemble" | program: *"12 points"*  |
 
