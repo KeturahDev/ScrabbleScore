@@ -29,14 +29,23 @@ namespace ScrabbleScoreModels
       Dictionary<int,List<string>>.ValueCollection valueLists = Options.Values;
       Dictionary<int,List<string>>.KeyCollection keyColl = Options.Keys;
 
-      foreach (List<string> list in valueLists)
+      foreach (int key in keyColl) 
       {
+        List list = Options.Value[key];
         if (list.Contains(CurrentLetter))
         {
           Status = CurrentLetter +" point accessed";
         }
-
       }
+      // foreach (List<string> list in valueLists)
+      // {
+      //   if (list.Contains(CurrentLetter))
+      //   {
+      //     Status = CurrentLetter +" point accessed";
+      //     //Points = list.key
+      //   }
+
+      // }
     }
   }
 }
