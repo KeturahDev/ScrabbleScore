@@ -9,7 +9,8 @@ namespace ScrabbleScore.Tests
     [TestMethod]
     public void LetterPoints_LettersReturnPoints_intPoint()
     {
-      Letter newLetter = new Letter("A");
+      Letter newLetter = new Letter("a");
+      newLetter.setPoint();
 
       int point = newLetter.Points;
 
