@@ -31,5 +31,16 @@ namespace ScrabbleScore.Tests
 
       Assert.AreEqual(5, totalPoints);
     }
+    [TestMethod]
+    public void CapsOk_CapsIsIgnored_Int()
+    {
+      string input = "mOO";
+      Word newWord = new Word(input);
+      newWord.GetLetters();
+
+      int totalPoints = newWord.Score;
+
+      Assert.AreEqual(5, totalPoints);
+    }
   }
 }
