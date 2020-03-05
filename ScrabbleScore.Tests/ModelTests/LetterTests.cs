@@ -9,8 +9,8 @@ namespace ScrabbleScore.Tests
     [TestMethod]
     public void LetterAccessed_LetterConfirmsOriginInDictionary_Status()
     {
-      Letter newLetter = new Letter("a");
-      newLetter.setPoint();
+      Letter newLetter = new Letter('a');
+      newLetter.SetPoint();
 
       string status = newLetter.Status;
 
@@ -19,8 +19,8 @@ namespace ScrabbleScore.Tests
     [TestMethod]
     public void GetPoint_LetterReturnsPoints_PointValue()
     {
-      Letter newLetter = new Letter("q");
-      newLetter.setPoint();
+      Letter newLetter = new Letter('q');
+      newLetter.SetPoint();
 
       int points = newLetter.Points;
 

@@ -13,7 +13,7 @@ namespace ScrabbleScore.Tests
     {
       string input = "jam";
       Word newWord = new Word(input);
-      newWord.getLetters();
+      newWord.GetLetters();
 
       List<char> letters = newWord.Letters;
 
@@ -25,7 +25,7 @@ namespace ScrabbleScore.Tests
     {
       string input = "moo";
       Word newWord = new Word(input);
-      newWord.getLetters();
+      newWord.GetLetters();
 
       int totalPoints = newWord.Score;
 

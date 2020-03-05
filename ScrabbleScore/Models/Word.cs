@@ -15,12 +15,18 @@ namespace ScrabbleScoreModels
       Score = 0;
     }
 
-    public void getLetters()
+    public void GetLetters()
     {
       char[] chars = Input.ToCharArray();
       foreach (char charecter in chars)
       {
         Letters.Add(charecter);
+      }
+      foreach (char letter in Letters)
+      {
+        Letter newLetter = new Letter(letter);
+        newLetter.SetPoint();
+        Score = Score += newLetter.Points;
       }
     }
   }
