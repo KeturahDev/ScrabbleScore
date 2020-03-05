@@ -27,7 +27,7 @@ namespace ScrabbleScoreModels
       {
       if (list.Contains(CurrentLetter))
       {
-        // Status = "point accessed";
+        Status = "point accessed";
       }
 
       }
