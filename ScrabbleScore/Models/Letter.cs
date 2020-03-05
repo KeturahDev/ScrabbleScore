@@ -4,19 +4,11 @@ namespace ScrabbleScoreModels
 {
   public class Letter
   {
-    static List<string> pointsAre1 = new List<string> {"a", "e", "i", "o", "u", "l", "n", "r", "s", "t"};
-    static List<string> pointsAre2 = new List<string> {"d", "g"};
-    static List<string> pointsAre3 = new List<string> {"b", "c", "m", "p"};
-    static List<string> pointsAre4 = new List<string> {"f", "h", "v", "w", "y"};
-    static List<string> pointsAre5 = new List<string> {"k"};
-    static List<string> pointsAre8 = new List<string> {"j", "x"};
-    static List<string> pointsAre10 = new List<string> {"q", "z"};
-    Dictionary<int,List<string>> letterPointEvals = new Dictionary <int,List<string>>() {{1, pointsAre1}, {2, pointsAre2}, {3, pointsAre3}, {4, pointsAre4}, {5, pointsAre5}, {8, pointsAre8}, {10, pointsAre10}};
-    // Dictionary<string, int> letterPointEvals = new Dictionary <string, int>() {{"A", 1}, {"E",1}, {""}}
+    Dictionary<string, int> letterPointEvals = new Dictionary <string, int>() {{"a", 1}, {"e", 1}, {"i", 1}, {"o", 1}, {"u", 1}, {"l", 1}, {"n", 1}, {"r", 1}, {"s", 1}, {"t", 1}, {"d", 2},{"g", 2},{"b", 3},{"c", 3},{"m", 3},{"p", 3},{"f", 4},{"h", 4},{"v", 4},{"w", 4},{"y", 4},{"k", 5},{"j", 8},{"x", 8},{"q", 10},{"z", 10},};
     public string CurrentLetter {set;get;}
     public int Points {set;get;}
     public string Status {set;get;}
-    public Dictionary<int,List<string>> Options {get;}
+    public Dictionary<string, int> Options {get;}
     public Letter(string letter)
     {
       CurrentLetter = letter;
@@ -24,17 +16,14 @@ namespace ScrabbleScoreModels
       Options = letterPointEvals;
       Status = "not retreived";
     }
-    public void Access()
+    public void setPoint()
     {
-      Dictionary<int,List<string>>.ValueCollection valueLists = Options.Values;
-      Dictionary<int,List<string>>.KeyCollection keyColl = Options.Keys;
-
-      foreach (int key in keyColl) 
+      Dictionary<string,int>.KeyCollection keyColl = Options.Keys;
+      foreach (string key in keyColl) 
       {
-        List list = Options.Value[key];
-        if (list.Contains(CurrentLetter))
+        if (key.Contains(CurrentLetter))
         {
-          Status = CurrentLetter +" point accessed";
+          Status = CurrentLetter +" point accessed fail test";
         }
       }
       // foreach (List<string> list in valueLists)
