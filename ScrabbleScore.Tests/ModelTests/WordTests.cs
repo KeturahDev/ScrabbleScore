@@ -18,7 +18,7 @@ namespace ScrabbleScore.Tests
       List<char> letters = newWord.Letters;
 
       //checking to see if middle is as expected
-      Assert.AreEqual('a', letters[4]);
+      Assert.AreEqual('a', letters[1]);
     }
   }
 }
