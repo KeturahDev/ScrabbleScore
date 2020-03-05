@@ -24,7 +24,7 @@ namespace ScrabbleScoreModels
         if (key.Contains(CurrentLetter))
         {
           Status = CurrentLetter +" point accessed";
-          // Points = key.Value;
+          Points = Options[key];
         }
       }
     }
