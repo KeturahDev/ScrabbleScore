@@ -20,5 +20,16 @@ namespace ScrabbleScore.Tests
       //checking to see if middle is as expected
       Assert.AreEqual('a', letters[1]);
     }
+    [TestMethod]
+    public void TallyPoints_RetreivePointsPerLetter_Int()
+    {
+      string input = "moo";
+      Word newWord = new Word(input);
+      newWord.getLetters();
+
+      int totalPoints = newWord.Score;
+
+      Assert.AreEqual(5, totalPoints);
+    }
   }
 }

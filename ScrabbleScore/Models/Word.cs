@@ -7,12 +7,12 @@ namespace ScrabbleScoreModels
     List<char> characters = new List<char> {};
     public string Input {get;set;}
     public List<char> Letters {get;set;}
-    // public int Score {get;set;}
+    public int Score {get;set;}
     public Word(string input)
     {
       Input = input;
       Letters = characters;
-      // Score = 0
+      Score = 0;
     }
 
     public void getLetters()
