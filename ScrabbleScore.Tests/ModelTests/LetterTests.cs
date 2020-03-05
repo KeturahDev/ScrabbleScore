@@ -14,7 +14,17 @@ namespace ScrabbleScore.Tests
 
       string status = newLetter.Status;
 
-      Assert.AreEqual("point accessed", status);
+      Assert.AreEqual("a point accessed", status);
+    }
+    [TestMethod]
+    public void Letter_LetterAccessComparisonListFromListCollections_Status()
+    {
+      Letter newLetter = new Letter("b");
+      newLetter.Access();
+
+      string status = newLetter.Status;
+
+      Assert.AreEqual("b point accessed", status);
     }
     // [TestMethod]
     // public void LetterPoints_LettersReturnPoints_intPoint()
