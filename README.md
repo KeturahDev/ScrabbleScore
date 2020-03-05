@@ -22,12 +22,9 @@ This project is being created with the intention of practing object-in-object fu
 
 | Specification | Example Input | Example Output |
 | :------------- |:-------------| :-------------------|
-| letters return correct amount of points | "j" | *8 points*  |
+| letters return correct amount of points(regardless of caps) | "j" | *8 points*  |
 | letters in combination return a sum of their points| "Moo" | *5 points*  |
-
-
-
-
+| user inputs a word, application returns their score | user: "assemble" | program: *"12 points"*  |
 
 
 
