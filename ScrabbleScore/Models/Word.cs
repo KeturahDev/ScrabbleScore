@@ -18,9 +18,9 @@ namespace ScrabbleScoreModels
     public void GetLetters()
     {
       char[] chars = Input.ToCharArray();
-      foreach (char charecter in chars)
+      foreach (char character in chars)
       {
-        Letters.Add(charecter);
+        Letters.Add(Char.ToLower(character));
       }
       foreach (char letter in Letters)
       {
