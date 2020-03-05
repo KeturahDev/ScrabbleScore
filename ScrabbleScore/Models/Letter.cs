@@ -23,7 +23,7 @@ namespace ScrabbleScoreModels
       {
         if (key.Contains(CurrentLetter))
         {
-          Status = CurrentLetter +" point accessed fail test";
+          Status = CurrentLetter +" point accessed";
         }
       }
       // foreach (List<string> list in valueLists)
