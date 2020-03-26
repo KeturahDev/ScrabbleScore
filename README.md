@@ -64,3 +64,5 @@ Currently there's no known bugs.
 
 ## Contact Info 
 Currently there's no known bugs, however, if there are any issues running this website I would love feedback! Please email me at keturah.dev@gmail.com.
+## Liscenced under MIT
+Copyright | Keturah Howard 2020
